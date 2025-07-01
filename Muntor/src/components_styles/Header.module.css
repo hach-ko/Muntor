@@ -1,0 +1,162 @@
+/* Default Light Mode */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e40af; /* Deep Blue */
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Dark Mode Header */
+.darkHeader {
+    background-color: #0a0a0a;
+}
+
+/* Logo and Text Container */
+.logoContainer {
+    display: flex;
+    align-items: center; /* Vertically center the logo and text */
+    gap: 10px; /* Space between logo and text */
+}
+
+/* Logo Styles */
+.logo {
+    height: 60px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Logo Text Styles */
+.logoText {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: white; /* Default text color */
+    margin: 0; /* Remove default margin */
+    user-select: none; /* Disable text selection */
+}
+
+/* Dark Mode Logo Text */
+.dark-mode .logoText {
+    color: #e5e7eb; /* Light text in dark mode */
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Navigation Links */
+.navLink {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #2563eb;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Add specific transitions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Disable text selection */
+}
+
+.navLink:hover {
+    background-color: #93c5fd;
+    color: #1e40af;
+    box-shadow: 0 0 10px #93c5fd; /* Add glow effect on hover */
+}
+
+/* Dark Mode Navigation Links */
+.darkNavLink {
+    background-color: #333;
+    color: #e5e7eb;
+}
+
+.darkNavLink:hover {
+    background-color: #555;
+    color: white;
+    box-shadow: 0 0 10px #555; /* Add glow effect on hover */
+}
+
+/* Light Mode Navigation Links */
+.light-mode .navLink:hover {
+    background-color: #e0f2fe; /* Light blue background on hover */
+    color: #1e3a8a; /* Dark blue text on hover */
+    box-shadow: 0 0 10px #e0f2fe; /* Add glow effect on hover */
+}
+
+/* Dark Mode Toggle Button */
+.darkModeToggle {
+    background-color: #141415;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add specific transitions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Disable text selection */
+}
+
+.darkModeToggle:hover {
+    background-color: rgb(39, 40, 42);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Temporary hover disable after clicking */
+.darkModeToggle.noFirstHover {
+    pointer-events: none;
+    transition: none;
+}
+
+/* Disabled button state */
+.darkModeToggle:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Dark Mode Global Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #e5e7eb;
+}
+
+/* Header turns black in dark mode */
+.dark-mode .header {
+    background-color: #0a0a0a;
+}
+
+/* Navbar buttons turn grey in dark mode */
+.dark-mode .navLink {
+    background-color: #333;
+    color: #e5e7eb;
+}
+
+.dark-mode .navLink:hover {
+    background-color: #555;
+    color: white;
+    box-shadow: 0 0 10px #555; /* Add glow effect on hover */
+}
+
+/* Light Mode Button */
+.lightModeButton {
+    background-color: white !important;
+    color: black !important;
+}
+
+.lightModeButton:hover {
+    background-color: #ddd !important;
+}

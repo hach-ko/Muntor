@@ -1,0 +1,92 @@
+.footer {
+  background: #0a0a0a; /* Match header */
+  color: #fff;
+  text-align: center;
+  padding: 2.2rem 1rem 2.2rem 1rem; /* Increased padding */
+  min-height: 90px; /* Ensures a minimum height */
+  width: 100%; /* CHANGED from 100vw */
+  z-index: 100;
+  opacity: 1;
+  border-radius: 1.5rem 1.5rem 0 0 / 2rem 2rem 0 0;
+  box-shadow: 0 4px 32px 0 rgba(100, 108, 255, 0.10), 0 1.5px 8px 0 rgba(100, 108, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.footer--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sticky-footer {
+  position: static;
+  width: 100%;
+}
+
+/* Remove the hover color change */
+.footer:hover {
+  background: #0a0a0a;
+  box-shadow: 0 8px 40px 0 #646cff33, 0 2px 12px 0 #646cff22;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+}
+
+.footer-social-btn {
+  background: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px 0 #646cff22;
+  transition: transform 0.22s, box-shadow 0.22s, background 0.2s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.footer-social-btn:hover {
+  transform: scale(1.18);
+  box-shadow: 0 4px 24px 0 #646cff55;
+  background: #e5e7eb;
+}
+
+.footer-social-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: invert(18%) sepia(8%) saturate(100%) hue-rotate(180deg) brightness(0.7);
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 0.7rem 0.2rem;
+    border-radius: 1rem 1rem 0 0 / 1.2rem 1.2rem 0 0;
+    font-size: 0.95rem;
+  }
+  .footer-social-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .footer-social-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

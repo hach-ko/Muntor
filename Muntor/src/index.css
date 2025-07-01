@@ -1,0 +1,208 @@
+:root {
+  --background-color: #ffffff; /* Default to light mode */
+  --text-color: #000000; /* Default to black text in light mode */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: var(--text-color); /* Use variable for text color */
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+/* Light Mode Styles */
+.light-mode {
+  --background-color: #ffffff;
+  --text-color: #000000; /* Black text in light mode */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #e5e7eb; /* Light text in dark mode */
+}
+
+/* Apply text color to all text elements */
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color); /* Ensure text color is applied */
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(.4,2,.6,1), visibility 0.4s cubic-bezier(.4,2,.6,1);
+}
+
+.footer--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.3s;
+}
+
+.sticky-footer {
+  position: static;
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-wrap: wrap; /* Ensure compatibility with other devices */
+}
+
+.image-container {
+  flex: 0 0 auto;
+  margin-right: 60px; /* Increase space between the image and text */
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  max-width: 350px; /* Set a maximum width for the images */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the container */
+}
+
+/* Invert the colors for light mode */
+.light-mode .image-container img {
+  filter:grayscale(100%) invert(1); /* Apply filter to invert colors */
+}
+
+/* Apply filter to swap white and black areas in dark mode */
+.dark-mode .image-container img {
+  filter: invert(0.1) brightness(5) contrast(1.2);
+}
+
+.left-aligned-image {
+  max-width: 350px; /* Increase the size of the image */
+  height: auto;
+  object-fit: contain; /* Maintain aspect ratio */
+  margin-left: 20px; /* Add left margin to move the image towards the right */
+}
+
+.left-aligned-image-dark {
+  max-width: 400px; /* Increase the size of the image for dark mode */
+  height: auto;
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+.left-aligned-image-light {
+  max-width: 350px; /* Size of the image for light mode */
+  height: auto;
+  object-fit: contain; /* Maintain aspect ratio */
+  margin-left: 20px; /* Add left margin to move the image towards the right */
+}
+
+.text-container {
+  flex: 1;
+  text-align: left;
+}
+
+.text-large {
+  font-size: 2.5rem; /* Large font size */
+  margin: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; /* Increase space above the button */
+}
+
+.explore-button {
+  padding: 15px 30px; /* Increase padding for a bigger button */
+  font-size: 1.25rem; /* Increase font size */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none; /* Remove border */
+}
+
+.dark-mode .explore-button {
+  background-color: #ffffff; /* Same background color as dark mode button */
+  color: rgb(0, 0, 0); /* Same text color as dark mode button */
+}
+
+.light-mode .explore-button {
+  background-color: black; /* Same background color as light mode button */
+  color: white; /* Same text color as light mode button */
+}
+
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.contact-input {
+  padding: 1rem 1.2rem;
+  border-radius: 1.5rem;
+  border: none;
+  background: #23242a;
+  color: #fff;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 12px 0 #646cff11;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.contact-input:focus {
+  outline: none;
+  background: #18191c;
+  box-shadow: 0 4px 24px 0 #646cff33;
+}
+@media (max-width: 600px) {
+  .contact-form {
+    max-width: 98vw;
+    gap: 0.7rem;
+  }
+  .contact-input {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+}
+

@@ -1,0 +1,60 @@
+.coming-soon-has-footer ~ .footer {
+  margin-top: -3rem; /* Pull the footer up */
+}
+
+.coming-soon-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Optionally, reduce min-height a bit if needed */
+}
+
+.coming-soon-container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem 2rem 1rem;
+  animation: fadeInPop 1.2s cubic-bezier(.4,2,.6,1), floatUpDown 2.5s ease-in-out infinite;
+}
+
+.coming-soon-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(90deg, #fff 0%, #e0e0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bounceIn 1.2s cubic-bezier(.4,2,.6,1);
+}
+
+.coming-soon-text {
+  font-size: 1.3rem;
+  color: #fff;
+  animation: fadeIn 2s 0.5s both;
+}
+
+@keyframes fadeInPop {
+  from { opacity: 0; transform: scale(0.92) translateY(40px);}
+  to { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.7) translateY(-60px);}
+  60% { opacity: 1; transform: scale(1.1) translateY(10px);}
+  100% { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+  100% { transform: translateY(0);}
+}

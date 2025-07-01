@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUNTOR</title>
+    <link rel="icon" type="image/png" href="/src/assets/logo.png" />
+    <script>
+      // Apply dark mode class immediately based on stored preference
+      const storedMode = localStorage.getItem("darkMode");
+      const isDarkMode = storedMode ? storedMode === "true" : true; // Default to dark mode
+      if (isDarkMode) {
+        document.documentElement.classList.add("dark-mode");
+      } else {
+        document.documentElement.classList.add("light-mode");
+      }
+    </script>
+  </head>
+  <body class="light-mode">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
