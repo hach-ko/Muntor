@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 import Header from "./components/Header";
@@ -8,7 +8,6 @@ import Soon from "./Pages/Coming_Soon";
 
 function AppContent() {
   const location = useLocation();
-  // List all Coming Soon routes here
   const comingSoonPaths = ["/pdfs", "/podcasts", "/newsletter", "/videos", "/about"];
   const isComingSoon = comingSoonPaths.includes(location.pathname);
 
@@ -33,7 +32,7 @@ function AppContent() {
 function App() {
   return (
     <HelmetProvider>
-      <Router basename="/Muntor">
+      <Router>
         <AppContent />
       </Router>
     </HelmetProvider>
