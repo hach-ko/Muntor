@@ -1,4 +1,9 @@
+NO COMMENTS AT ALL
+IF THERE EVER ARE ANY, REMOVE THEM
+
 We are developing an information and helpful website related to MUN
+
+Also for now the website it dark mode but in the future we will add an option for white mode
 
 Currently we are more focused on the ui of the website rather than it's content
 

@@ -13,7 +13,7 @@ const socials = [
 	},
 	{
 		name: "Instagram",
-		url: "#",
+		url: "https://www.instagram.com/learning_at_muntor/", // updated link
 		icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg",
 	},
 ];
